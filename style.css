@@ -1,0 +1,185 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Bebas+Neue&family=Mukta:wght@500&family=Rowdies:wght@300&family=Rubik:wght@300&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@500&family=Bebas+Neue&family=Mukta:wght@500&family=Oleo+Script&family=Rowdies:wght@300&family=Rubik:wght@300&family=Varela+Round&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Baloo+Bhaijaan+2:wght@500&family=Bebas+Neue&family=Mukta:wght@500&family=Oleo+Script&family=Rowdies:wght@300&family=Rubik:wght@300&family=Varela+Round&display=swap');
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.card-container{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(#F5E6E6, #C60404, #720404, #2C0505);
+}
+
+.card{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.top-hearts{
+    height: 35%;
+    width: 59%;
+}
+
+.top-badge{
+    position: absolute;
+    top: 18%;
+    height: 17%;
+    width: 100%;
+}
+
+.after-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 10%;
+    color: white;
+    font-weight: bold;
+    font-family: 'Varela Round', sans-serif;
+}
+
+.click-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url("./images/heart.png");
+    width: 136px;
+    height: 124px;
+    margin: 50%;
+    font-size: 1.5em;
+    font-family: 'Oleo Script', cursive;
+}
+
+.photo{
+    height: 70%;
+    width: 100%;
+}
+
+.last-quote{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    padding: 5px;
+    color: rgb(255, 0, 55);
+    margin: 50px 0px 50px 0px;
+}
+
+.photo1-c1{ 
+    background-color: rgb(241, 0, 52);
+    position: absolute;
+    height: 64.9%;
+    width: 50%;
+    top: 40%;
+}
+
+.photo2-c1{
+    background-color: rgb(241, 0, 52);
+    position: absolute;
+    height: 64.9%;
+    width: 50%;
+    top: 40%;
+    left: 50%;
+}
+
+.image-1{
+    height: 70%;
+    width: 100%;
+}
+
+#extra-box{
+    position: fixed;
+    background-color: #000000ab;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    display: none;
+    color: white;
+}
+
+.close-button{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    height: 30px;
+    width: 30px;
+    background-color: red;
+    border-radius: 2px;
+}
+
+.dandi-1{
+    position:relative;
+    top: 12px;
+    background-color: white;
+    height: 5px;
+    width: 30px;
+    transform: rotate(45deg);
+}
+
+.dandi-2{
+    position:relative;
+    top: 7px;
+    background-color: white;
+    height: 5px;
+    transform: rotate(135deg);
+    width: 30px;
+}
+
+.side-arrow-1{
+    position: absolute;
+    top: 50%;
+}
+
+.side-arrow-2{
+    position: absolute;
+    top: 50%;
+    left: 90%;
+}
+
+#my-image-container{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.my-image{
+    height: 500px;
+    width: 250px;
+}
+
+#my-image-container-info{
+    display: none;
+    color: white;
+    font-weight: bold;
+    font-family: 'Akaya Telivigala', cursive;
+    font-size: 2em;
+    text-align: center;
+}
+
+.names{
+    color: rgb(255, 174, 0);
+}
+
+.name-box{
+    display: none;
+    position: fixed;
+    top: 0px;
+    height: 100vh;
+    width: 100vw;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.527);
+}
+
+.name-box ul li {
+    list-style: none;
+    padding: 20px 0px;
+    font-weight: bold;
+    font-size: 1.5em;
+    font-family: 'Varela Round', sans-serif;
+}

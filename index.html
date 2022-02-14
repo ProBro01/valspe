@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Valentine Day Special</title>
+</head>
+
+<body>
+    <div class="card-container">
+        <div class="card">
+            <img src="./images/heartbackground.png" class="top-hearts">
+            <img src="./images/valentine badge.png" class="top-badge">
+        </div>
+        <div class="after-info">
+            <p>Your are the one of my<br>most important things</p>
+            <div class="click-image">Click</div>
+        </div>
+    </div>
+    <div class="last-quote">
+        <h1>Happy Valentines Day <span class="names" onclick="shownames()">Bhawna</span> </h1>
+    </div>
+    <div>
+        <img src="./images/photo1.png" class="photo">
+        <img src="./images/photo2.jpg" class="photo">
+        <img src="./images/photo3.jpg" class="photo">
+    </div>
+    <div id="extra-box">
+        <div class="close-button" onclick="doshow()">
+            <div class="dandi-1"></div>
+            <div class="dandi-2"></div>
+        </div>
+        <div id="my-image-container">
+            <img src="./images/myimg1.jpeg" class="my-image">
+            <div id="my-image-container-info">I LOVE YOU <br>MY VALENTINE</div>
+        </div>
+        <div>
+            <svg height="50px" widht="50px" class="side-arrow-1" onclick="shiftright()">
+                <polygon points="50,0 25,25 50,50" style="stroke: white; fill: white" />
+            </svg>
+            <svg height="50px" widht="50px" class="side-arrow-2" onclick="shiftleft()">
+                <polygon points="0,0 25,25 0,50" style="stroke: white; fill: white" />
+            </svg>
+        </div>
+    </div>
+    <div class="name-box">
+        <div class="close-button" onclick="shownames()">
+            <div class="dandi-1"></div>
+            <div class="dandi-2"></div>
+        </div>
+        <ul>
+            <li>Bhawna</li>
+            <li>Duck</li>
+            <li>Pagal</li>
+            <li>Bewkoof</li>
+            <li>Nakchadi</li>
+            <li>Aunty</li>
+            <li>Moti (Motee aur moti)</li>
+            <li>Buudiya</li>
+            <li>aur pata nahi kya kya...</li>
+        </ul>
+    </div>    
+    <script>
+        var click_img = document.querySelector(".click-image")
+        var isshown = false
+        var msgboxsetted = false
+        var onwhatindex = 0
+        var shownamevar = false
+        var images = ["./images/myimg1.jpeg", "./images/heart.png", "./images/myimg2.jpeg"]
+
+        function setextraboximage() {
+            if (onwhatindex == 1) {
+                document.querySelector(".my-image").style.height = "auto"
+                document.querySelector(".my-image").style.width = "auto"
+            }
+            else {
+                document.querySelector(".my-image").style.height = "500px"
+                document.querySelector(".my-image").style.width = "250px"
+            }
+            document.querySelector(".my-image").src = images[onwhatindex]
+        }
+
+        function shiftright() {
+            if (onwhatindex > 0) {
+                if(onwhatindex == 3){
+                    document.querySelector(".my-image").style.display = "block"
+                    document.getElementById("my-image-container-info").style.display = "none"
+                }
+                onwhatindex -= 1
+                setextraboximage()
+            }
+        }
+
+        function shiftleft() {
+            if (onwhatindex < 3) {
+                onwhatindex += 1
+                if (onwhatindex == 3 && !msgboxsetted) {
+                    document.querySelector(".my-image").style.display = "none"
+                    document.getElementById("my-image-container-info").style.display = "block"
+                    msgboxsetted = true
+                }
+                else {
+                    document.querySelector(".my-image").style.display = "block"
+                    document.getElementById("my-image-container-info").style.display = "none"
+                    setextraboximage()
+                    msgboxsetted = false
+                }
+            }
+        }
+
+        function doshow() {
+            if (!isshown) {
+                document.getElementById('extra-box').style.display = "block"
+                isshown = true
+            }
+            else {
+                document.getElementById('extra-box').style.display = "none"
+                isshown = false
+            }
+        }
+
+        function shownames(){
+            if(!shownamevar){
+                document.querySelector(".name-box").style.display = "flex"
+                shownamevar = true
+            }
+            else{
+                document.querySelector(".name-box").style.display = "none"
+                shownamevar = false
+            }
+        }
+
+        click_img.addEventListener("click", (event) => {
+            doshow()
+        })
+    </script>
+</body>
+
+</html>
